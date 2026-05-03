@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('/imgs/background.png');
+    font-family: "Pixelify Sans", sans-serif;
+}
+img{
+    height: 25px;
+}
+.todo-list{
+    background-color: #F5D3C4;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    min-height: 500px;
+    height: auto;
+    width: 600px;
+    margin: 150px auto 0;
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column;
+    box-shadow: inset 1px 1px 0px 0px #ffffff, inset 0px -1px 0px 0px #8b8b8b;
+    padding-bottom: 10px;
+}
+.barra-de-cima{
+    background-color: #696FC7;
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0;
+    padding: 5px;
+    justify-content: flex-end;
+    gap: 10px;
+    box-shadow: inset 1px 1px 0px 0px #ffffff, inset 0px -1px 0px 0px #8b8b8b;
+}
+.barra-de-cima h3 {
+    margin-right: auto;
+    font-size: 25px;
+}
+.arquivos {
+    background-color: #A7AAE1;
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 0 2px;
+    padding: 5px;
+    gap: 10px;
+    box-shadow: inset 1px 1px 0px 0px #ffffff, inset 0px -1px 0px 0px #8b8b8b;
+}
+
+.botoes{
+    background-color:#A7AAE1;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 3px 1px;
+    height: 30px;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 0px 0px #ffffff, inset 0px -1px 0px 0px #8b8b8b;
+}
+input{
+    width:300px;
+    height:50px;
+    margin: 30px 20px 0 60px;
+    padding: 5px;
+    border:solid;
+    border-width: 2px;
+    box-shadow: inset 1px 1px 0px 0px #ffffff, inset 0px -1px 0px 0px #8b8b8b;
+    font:15pt "Pixelify Sans", sans-serif;
+    background-color: #F2AEBB;
+    border-radius: 4px;
+}
+input:focus {
+  background-color: #ffc0d0;
+  box-shadow: 2px 2px 0px #3b3b3b;
+}
+#addButton{
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 3px;
+    border:solid;
+    border-width: 2px;
+    box-shadow: inset 1px 1px 0px 0px #ffffff, inset 0px -1px 0px 0px #8b8b8b;
+    font:12pt "Pixelify Sans", sans-serif;
+    background-color: #F2AEBB;
+    margin-left: 20px;
+}
+#addButton:hover{
+  background-color: #ffc0d0;
+  box-shadow: 2px 2px 0px #3b3b3b;
+  transition: background-color 0.2s ease-in-out 0.1s;
+}
+#taskList {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    width: 500px;
+    margin: 25px 0 0 45px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    overflow-y: auto;
+    max-height: 250px;
+}
+#taskList li {
+    background-color: #D9D9D9;
+    border: solid;
+    border-radius: 3px;
+    border-width: 2px;
+    font: 12pt "Pixelify Sans", sans-serif;
+    box-shadow: inset 1px 1px 0px 0px #ffffff, inset 0px -1px 0px 0px #8b8b8b;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+#taskList li img {
+    mix-blend-mode: multiply;
+    cursor: pointer;
+    border: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    padding: 2px;
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#taskList li img:hover {
+    transform: translateY(-2px) scale(1.05);
+    background-color: #ffffff;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+    border-color: #000000;
+}
+
+
+#taskList li img:active {
+    transform: translateY(1px) scale(0.98);
+    transition: 0.02s linear;
+    filter: drop-shadow(0 0px 0px rgba(0, 0, 0, 0));
+}
+
+
+#taskList li img[alt="selecionar"]:hover {
+    filter: drop-shadow(0 2px 3px rgba(76, 175, 80, 0.5));
+}
+
+
+#taskList li img[alt="Descartar"]:hover {
+    filter: drop-shadow(0 2px 3px rgba(244, 67, 54, 0.5));
+}
+li.done {
+    background-color: greenyellow;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+li.done span {
+    text-decoration: line-through;
+}
